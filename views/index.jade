@@ -1,0 +1,165 @@
+extends layout
+block content
+    .navbar.navbar-fixed-top.bs-docs-nav.nav-justified
+      .container(style='width: auto;')
+        a.navbar-brand(href='#') PAUDku
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-js-navbar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .nav-collapse.collapse.bs-js-navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#beranda') Beranda
+            li
+              a(href='#visi') Visi Misi
+            li
+              a(href='#kegiatan') Kegiatan
+            li
+              a(href='#tentang') Tentang Kami   
+          ul.nav.navbar-nav.pull-right
+            li#fat-menu.dropdown
+              a#drop3.dropdown-toggle(href='#', data-toggle='dropdown')
+                b.caret
+              ul.dropdown-menu(aria-labelledby='drop3')
+                li
+                  a
+                    button.btn.btn-info.btn-block(type='button', data-toggle='modal', data-target='#myModal') Admin
+                li
+                  a
+                    button.btn.btn-info.btn-block(type='button', data-toggle='modal', data-target='#myModal') Login
+                li.divider
+                li
+                  a(tabindex='-1', href='#') About
+        // /.nav-collapse
+        // /.container
+    // sample modal    
+    .container-modal
+      #myModal.modal.fade(style='display: none;', tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+              h4.modal-title Login Form
+            .modal-body
+              .container
+                fieldset         
+                  #login.span10
+                    h1 Login
+                    form(action='/login', method='POST')
+                      .form-group
+                        label(for='inputName') Username
+                        input#inputName.form-control.col-lg-4(name='username', placeholder='Username', type='text')
+                      .form-group
+                        label(for='inputTitle') Password
+                        input#inputPassword.form-control.col-lg-4(name='password', placeholder='Password', type='password')
+                      .modal-footer.span5
+                        button.btn.btn-primary(type='submit') Sign In
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+      // /.modal
+    #container.container
+      .span6
+        #carousel-main.container.div(style='padding-top: 4em;')
+          .carousel.slide.bs-docs-carousel-example
+            ol.carousel-indicators
+              li.active(data-target='#carousel-main', data-slide-to='0')
+              li(data-target='#carousel-main', data-slide-to='1')
+              li(data-target='#carousel-main', data-slide-to='2')
+            .carousel-inner
+              .item.active
+                img.img-rounded(src='/images/1a.jpg', alt='First slide')
+              .item
+                img.img-rounded(src='/images/2a.jpg', alt='Second slide')
+              .item
+                img.img-rounded(src='/images/3a.jpg', alt='Third slide')
+            a.left.carousel-control(href='#carousel-main', data-slide='prev')
+              span.icon-prev
+            a.right.carousel-control(href='#carousel-main', data-slide='next')
+              span.icon-next
+                // /example
+        #beranda.div(style='padding-top: 4em;')
+          .jumbotron
+            h2 PAUD USWATUN HASANAH
+            p.text-primary
+              | Selamat Datang di website Paud Uswatun Hasanah. Kami adalah lembaga pendidikan yang bergerak di bidang pendidikan anak usia dini 3-5 tahun
+            p
+               img.img-rounded(data-src='holder.js/200x200/auto/#666:#444/text:First slide', alt=LOGO)
+          .row
+            .col-lg-6
+              h4 Subheading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+              h4 Subheading
+              p
+                | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+              h4 Subheading
+              p Maecenas sed diam eget risus varius blandit sit amet non magna.
+    
+        #visi.container.div(style='padding-top: 4em;')
+          h1(style='text-align:center') Visi Misi
+          .row
+            .span6
+              h3 Visi 
+              ul.text-primary
+                h5
+                    b"MEMBANGUN PENDIDIKAN USIA DINI YANG BERWAWASAN MASA DEPAN DAN BERAKHLAQUL KARIMAH" 
+              h3 Misi 
+              ul.text-primary
+                li Menjadikan setiap kegiatan bernilai ibadah 
+                li Mengembangkan iklim belajar yang menyenangkan, berwawasan luas yang berakar pada norma dan nilai-nilai budaya bangsa 
+                li Mengembangkan keterampilan belajar pada tiap diri siswa 
+                li Memberdayakan seluruh potensi sekolah untuk memberikan mutu pelayanan yang maksimal 
+              h3 Maksud dan Tujuan 
+              ul.text-primary
+                li Membina dan membimbing anak usia dini agar dapat tumbuh dan berkembang secara optimal sesuai dengan potensi dan kemampuan masing-masing anak.
+                li Membantu anak dari keluarga pra-sejahtera guna memperoleh pelayanan pendidikan anak usia dini.
+                li Memberi kesadaran bagi orang tua dan masyarakat umum akan pentingnya pendidikan anak usia dini. 
+                li Membina para orang tua pra-sejahtera melalui program pendampingan agar memiliki keterampilan mendidik anak usia dini dengan baik dan memperhatikan potensi anak.
+      
+        #kegiatan.container.div(style='padding-top: 4em;')
+          h1 Kegiatan
+          .row
+              .span-one-third 
+                | Deskripsi kegiatan yang dilakukan
+                br
+                | Deskripsi kegiatan yang dilakukan
+                br
+                | Deskripsi kegiatan yang dilakukan
+                br
+                | Deskripsi kegiatan yang dilakukan
+
+          .cycle-slideshow(data-cycle-pause-on-hover='true', data-cycle-timeout='2000')
+            // empty element for overlay
+            .cycle-overlay
+            img(src='/images/kegiatan/1.jpg', data-cycle-title='Kegiatan 1', data-cycle-desc='Deskripsi kegiatan 1')
+            img(src='/images/kegiatan/2.jpg', data-cycle-title='Kegiatan 2', data-cycle-desc='Deskripsi kegiatan 2')
+            img(src='/images/kegiatan/3.jpg', data-cycle-title='Kegiatan 3', data-cycle-desc='Deskripsi kegiatan 3')
+            img(src='/images/kegiatan/4.jpg', data-cycle-title='Kegiatan 4', data-cycle-desc='Deskripsi kegiatan 4')
+    
+        #tentang.container.div(style='padding-top: 4em;')
+          h1 Tentang Kami
+          .row
+            .span-one-third  
+            .span-one-third
+              strong
+                | Airport Transfers are available
+                br
+                | Tours can be organised by Villa Staff
+                br
+                | Motor Scooters are available for Hire
+                br
+                | In-house massages can be arranged
+ 
+   
+
+        //site footer
+    footer
+      p.pull-right
+        a(href='#') Back to top
+      p
+        | © 2013 Company, Inc. ·
+        a(href='#') Privacy
+        | ·
+        a(href='#') Terms
+
+ 

@@ -50,6 +50,31 @@ app.post('/login', function (req, res) {
   }
 });
 
+app.get('/', function(req, res){
+  res.render('index', {
+    title: 'Home'
+  });
+});
+
+app.get('/visi', function(req, res){
+  res.render('visi', {
+    title: 'Visi Misi'
+  });
+});
+
+app.get('/kegiatan', function(req, res){
+  res.render('kegiatan', {
+    title: 'Kegiatan'
+  });
+});
+
+app.get('/tentang', function(req, res){
+  res.render('tentang', {
+    title: 'Tentang Kami'
+  });
+});
+
+
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });

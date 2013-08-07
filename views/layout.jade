@@ -5,8 +5,63 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     // Bootstrap
     link(href='/stylesheets/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/style.css', rel='stylesheet', media='screen')
     link(href='/stylesheets/demo-slideshow.css', rel='stylesheet', media='screen')
   body
+    .navbar.navbar-fixed-top
+      .container(style='width: auto;')
+        a.navbar-brand(href='#') PAUDku
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-js-navbar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .nav-collapse.collapse.bs-js-navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/') Beranda
+            li
+              a(href='/visi') Visi Misi
+            li
+              a(href='/kegiatan') Kegiatan
+            li
+              a(href='/tentang') Tentang Kami   
+          ul.nav.navbar-nav.pull-right
+            li#fat-menu.dropdown
+              a#drop3.dropdown-toggle(href='#', data-toggle='dropdown')
+                b.caret
+              ul.dropdown-menu
+                li
+                  a
+                    button.btn.btn-info.btn-block(type='button', data-toggle='modal', data-target='#myModal') Admin
+        // /.nav-collapse
+        // /.container
+    // sample modal    
+    .container-modal
+      #myModal.modal.fade(style='display: none;', tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-hidden='true') x
+              h4.modal-title Login
+            .modal-body
+              .container
+                fieldset         
+                  #login
+                    form(action='/login', method='POST')
+                      .form-group
+                        .row
+                          .col-lg-6
+                            label.control-label(for='inputName') Username
+                            input#inputName.form-control(name='username', placeholder='Username', type='text')
+                      .form-group
+                        .row
+                          .col-lg-6
+                            label(for='inputTitle') Password
+                            input#inputPassword.form-control(name='password', placeholder='Password', type='password')
+                    .modal-footer
+                      button.btn.btn-primary(type='submit') Sign In
+                      button.btn.btn-default(type='button', data-dismiss='modal') Close
+      // /.modal
     block content
 
 
@@ -19,7 +74,20 @@ html
     //jquery cycle2 plugin
     script(src='/javascripts/jquery.cycle2.min.js')
     script(src='/javascripts/jquery.cycle2.caption2.min.js')
-      //site footer
-  
+      
+      
+    //site footer
+    footer.bs-footer
+      .bs-social
+        ul.bs-social-buttons
+          li
+            iframe.github-btn(src='http://ghbtns.com/github-btn.html?user=jipaw&repo=myPaud&type=watch&count=true', allowtransparency='true', frameborder='0', height='20px', scrolling='0', width='100px')
+      p
+        | Designed and built full of passionate by
+        a(href='#', target='_blank') jipaw
+        | .
+      ul.footer-links
+        li
+          a(href='/') Home
 
 

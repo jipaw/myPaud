@@ -32,8 +32,16 @@ if ('development' == app.get('env')) {
 
 require('./routes/index')(app);
 
+app.get('/', function(req, res){
+  res.render('index', {
+    title: 'Beranda'
+  });
+});
+
 app.get('/admin', function(req, res){
-  res.render('admin.jade');
+  res.render('admin', {
+    title: 'Admin'
+  });
 });
 
 app.get('/login', function(req, res){
@@ -48,12 +56,6 @@ app.post('/login', function (req, res) {
     console.log('username/password salah');
     res.send('Bad user/pass');
   }
-});
-
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home'
-  });
 });
 
 app.get('/visi', function(req, res){

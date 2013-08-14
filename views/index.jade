@@ -1,47 +1,36 @@
 extends layout
 block content
-    #container.container
+  include modals/navbar
+  include modals/loginModal
+  include modals/carousel
+  include modals/signUpModal
+  #beranda
+    #header
+      h1 PAUD USWATUN HASANAH
+        p Selamat Datang di website Paud Uswatun Hasanah. Kami adalah lembaga pendidikan yang bergerak di bidang pendidikan anak usia dini 3-5 tahun
+    .row-fluid
       .span6
-        #carousel-main.container.carousel.slide.div(style='margin-top: 4em;')
-            ol.carousel-indicators
-              li.active(data-target='#carousel-main', data-slide-to='0')
-              li(data-target='#carousel-main', data-slide-to='1')
-              li(data-target='#carousel-main', data-slide-to='2')
-            .carousel-inner
-              .item.active
-                img.img-rounded(src='/images/1a.jpg', alt='First slide')
-                .carousel-caption
-                  h3 Gambar 1
-                  p Keterangan gambar 1
-              .item
-                img.img-rounded(src='/images/2a.jpg', alt='Second slide')
-                .carousel-caption
-                  h3 Gambar 2
-                  p Keterangan gambar 2
-              .item
-                img.img-rounded(src='/images/3a.jpg', alt='Third slide')
-                .carousel-caption
-                  h3 Gambar 3
-                  p Keterangan gambar 3 
-            a.left.carousel-control(href='#carousel-main', data-slide='prev')
-              span.icon-prev
-            a.right.carousel-control(href='#carousel-main', data-slide='next')
-              span.icon-next
-                // /example
-        #beranda.div(style='padding-top: 4em;')
-          .jumbotron
-            h2 PAUD USWATUN HASANAH
-            p.text-primary
-              | Selamat Datang di website Paud Uswatun Hasanah. Kami adalah lembaga pendidikan yang bergerak di bidang pendidikan anak usia dini 3-5 tahun
-            p
-               img.img-rounded(data-src='holder.js/200x200/auto/#666:#444/text:First slide', alt=LOGO)
-          .row
-            .col-lg-6
-              h4 Subheading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-              h4 Subheading
-              p
-                | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-              h4 Subheading
-              p Maecenas sed diam eget risus varius blandit sit amet non magna.
+        h4 Latar Belakang
+        p
+          | Berawal dari banyaknya anak usia dini yang belum dapat menikmati pendidikan usia dini, dikarenakan masih sedikitnya sarana bermain dan belajar, akhirnya kami berinisiatif membangun Kober (Kelompok Belajar).
+      .span6
+        h4 Sejarah
+        p
+          | PAUD USWATUN HASANAH berdiri pada tanggal 16 Februari 2008. Kegiatan belajar mengajar berlangsung dengan lambat dan ruangan yang sempit. Namun hal itu tidak menyurutkan niat kami untuk membantu kegiatan pendidikan terutama bagi anak-anak usia dini.
+  include modals/footer
+block scripts
+  // JavaScript plugins (requires jQuery)
+  script(src='/javascripts/jquery.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/javascripts/bootstrap/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap/bootstrap-carousel.js')
+  script(src='/javascripts/bootstrap/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap/respond.min.js')
+  //jquery cycle plugin
+  script(src='/javascripts/prettify.js')
+
+
+ 

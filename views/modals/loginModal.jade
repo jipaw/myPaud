@@ -1,0 +1,16 @@
+ // sample modal    
+#loginModal.modal.fade(style='display: none;', tabindex='-1')
+  .modal-header
+    button.close(type='button', data-dismiss='modal') &times;
+    h4.modal-title Login
+  .modal-body
+    form(action='/login', method="post")        
+      fieldset
+        .control-group
+          label Username
+          input.input-large(name='username', placeholder='Your username', type='text')
+          label Password
+          input.input-large(name='password', placeholder='Your password', type='password')
+        .control-group.pull-right
+          button.btn.btn-primary(type='submit') Sign In
+          button.btn.btn-default(type='button', data-dismiss='modal') Close   

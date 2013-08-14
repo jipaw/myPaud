@@ -3,91 +3,39 @@ html
   head
     title My Paud
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    // Bootstrap
-    link(href='/stylesheets/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet', media='screen')
-    link(href='/stylesheets/style.css', rel='stylesheet', media='screen')
-    link(href='/stylesheets/demo-slideshow.css', rel='stylesheet', media='screen')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    //css
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/font-awesome.min.css')
+    // if IE 7
+      link(rel='stylesheet', href='/stylesheets/bootstrap/css/font-awesome-ie7.min.css')
+    link(rel='stylesheet', href='/stylesheets/site.css')
+    link(rel='stylesheet', href='/stylesheets/gallery.css')
+    link(rel='stylesheet', href='/stylesheets/elastislide.css')
+    link(rel='stylesheet', href='/stylesheets/prettify.css')
+    noscript
+      style.
+        .es-carousel ul{
+        display: block;
+        }
+    script#img-wrapper-tmpl(type='text/x-jquery-tmpl')
+      .rg-image-wrapper
+        .rg-image-nav
+          a.rg-image-nav-prev(href='#'). Previous Image
+          a.rg-image-nav-next(href='#') Next Image
+        .rg-image
+        .rg-loading
+        .rg-caption-wrapper
+          .rg-caption(style='display: none;')
+            p
+    script(type='text/javascript')
+      $(document).ready(function() {
+        $('#tooltip').tooltip();
+      });
   body
-    .navbar.navbar-fixed-top
-      .container(style='width: auto;')
-        a.navbar-brand(href='#') PAUDku
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-js-navbar-collapse')
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        .nav-collapse.collapse.bs-js-navbar-collapse
-          ul.nav.navbar-nav
-            li
-              a(href='/') Beranda
-            li
-              a(href='/visi') Visi Misi
-            li
-              a(href='/kegiatan') Kegiatan
-            li
-              a(href='/tentang') Tentang Kami   
-          ul.nav.navbar-nav.pull-right
-            li#fat-menu.dropdown
-              a#drop3.dropdown-toggle(href='#', data-toggle='dropdown')
-                b.caret
-              ul.dropdown-menu
-                li
-                  a
-                    button.btn.btn-info.btn-block(type='button', data-toggle='modal', data-target='#myModal') Admin
-        // /.nav-collapse
-        // /.container
-    // sample modal    
-    .container-modal
-      #myModal.modal.fade(style='display: none;', tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal', aria-hidden='true') x
-              h4.modal-title Login
-            .modal-body
-              .container
-                fieldset         
-                  #login
-                    form(action='/login', method='POST')
-                      .form-group
-                        .row
-                          .col-lg-6
-                            label.control-label(for='inputName') Username
-                            input#inputName.form-control(name='username', placeholder='Username', type='text')
-                      .form-group
-                        .row
-                          .col-lg-6
-                            label(for='inputTitle') Password
-                            input#inputPassword.form-control(name='password', placeholder='Password', type='password')
-                    .modal-footer
-                      button.btn.btn-primary(type='submit') Sign In
-                      button.btn.btn-default(type='button', data-dismiss='modal') Close
-      // /.modal
-    block content
-
-
-    // JavaScript plugins (requires jQuery)
-    script(src='/javascripts/jquery.js')
-    // Include all compiled plugins (below), or include individual files as needed
-    script(src='/stylesheets/bootstrap/dist/js/bootstrap.min.js')
-    // Optionally enable responsive features in IE8
-    script(src='/stylesheets/bootstrap/dist/js/respond.min.js')
-    //jquery cycle2 plugin
-    script(src='/javascripts/jquery.cycle2.min.js')
-    script(src='/javascripts/jquery.cycle2.caption2.min.js')
-      
-      
-    //site footer
-    footer.bs-footer
-      .bs-social
-        ul.bs-social-buttons
-          li
-            iframe.github-btn(src='http://ghbtns.com/github-btn.html?user=jipaw&repo=myPaud&type=watch&count=true', allowtransparency='true', frameborder='0', height='20px', scrolling='0', width='100px')
-      p
-        | Designed and built full of passionate by
-        a(href='#', target='_blank') jipaw
-        | .
-      ul.footer-links
-        li
-          a(href='/') Home
+    #wrap
+      block content
+    block scripts
 
 

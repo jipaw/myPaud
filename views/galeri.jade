@@ -1,0 +1,58 @@
+extends layout
+block content
+  include modals/navbar
+  include modals/loginModal
+  include modals/signUpModal
+  #galeri.container
+    h1 Galeri
+    .row
+        .container
+          | Galeri Kegiatan di PAUD Uswatun hasanah
+    #rg-gallery.rg-gallery
+      .rg-thumbs
+        //Elastiside Carousel Thumbnail Viewer
+      .es-carousel-wrapper
+        .es-nav
+          span.es-nav-prev Previous
+          span.es-nav-next Next
+        .es-carousel
+          ul
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/1.jpg', data-large='images/kegiatan/1.jpg', alt='img01', data-description='Kegiatan Outdoor PAUD')
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/2.jpg', data-large='images/kegiatan/2.jpg', alt='img02', data-description='Kegiatan Outdoor PAUD')
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/3.jpg', data-large='images/kegiatan/3.jpg', alt='img03', data-description='Kegiatan Outdoor PAUD')
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/4.jpg', data-large='images/kegiatan/4.jpg', alt='img04', data-description='Kegiatan Outdoor PAUD')
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/5.jpg', data-large='images/kegiatan/5.jpg', alt='img05', data-description='Kegiatan Outdoor PAUD')
+            li
+              a(href='#')
+                img(src='/images/kegiatan/thumbs/6.jpg', data-large='images/kegiatan/6.jpg', alt='img06', data-description='Kegiatan Outdoor PAUD')
+
+  include modals/footer
+block scripts
+ 
+  // JavaScript plugins (requires jQuery)
+  script(src='/javascripts/jquery.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/javascripts/bootstrap/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap/respond.min.js')
+    //3'rd party plugin
+  script(src='/javascripts/transition.js')
+  script(src='/javascripts/prettify.js')  
+  //responsive image gallery plugin
+  script(src='/javascripts/jquery.tmpl.min.js')
+  script(src='/javascripts/jquery.easing.1.3.js')
+  script(src='/javascripts/jquery.elastislide.js')
+  script(src='/javascripts/gallery.js')

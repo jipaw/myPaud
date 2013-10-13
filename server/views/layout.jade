@@ -1,0 +1,41 @@
+!!! 5
+html
+  head
+    title My Paud
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    //css
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/font-awesome.min.css')
+    // if IE 7
+      link(rel='stylesheet', href='/stylesheets/bootstrap/css/font-awesome-ie7.min.css')
+    link(rel='stylesheet', href='/stylesheets/site.css')
+    link(rel='stylesheet', href='/stylesheets/gallery.css')
+    link(rel='stylesheet', href='/stylesheets/elastislide.css')
+    link(rel='stylesheet', href='/stylesheets/prettify.css')
+    noscript
+      style.
+        .es-carousel ul{
+        display: block;
+        }
+    script#img-wrapper-tmpl(type='text/x-jquery-tmpl')
+      .rg-image-wrapper
+        .rg-image-nav
+          a.rg-image-nav-prev(href='#'). Previous Image
+          a.rg-image-nav-next(href='#') Next Image
+        .rg-image
+        .rg-loading
+        .rg-caption-wrapper
+          .rg-caption(style='display: none;')
+            p
+    script.
+      $(document).ready(function() {
+        $('#tooltip').tooltip();
+      });
+  body
+    #wrap
+      block content
+    block scripts
+
+

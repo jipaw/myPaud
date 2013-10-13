@@ -1,0 +1,36 @@
+extends layout
+block content
+  include modals/navbar
+  include modals/loginModal
+  include modals/carousel
+  include modals/signUpModal
+  #beranda
+    #header
+      h1 PAUD USWATUN HASANAH
+        p Selamat Datang di website Paud Uswatun Hasanah. Kami adalah lembaga pendidikan yang bergerak di bidang pendidikan anak usia dini 3-5 tahun
+    .row-fluid
+      .span6
+        h4 Latar Belakang
+        p
+          | Berawal dari banyaknya anak usia dini yang belum dapat menikmati pendidikan usia dini, dikarenakan masih sedikitnya sarana bermain dan belajar, akhirnya kami berinisiatif membangun Kober (Kelompok Belajar).
+      .span6
+        h4 Sejarah
+        p
+          | PAUD USWATUN HASANAH berdiri pada tanggal 16 Februari 2008. Kegiatan belajar mengajar berlangsung dengan lambat dan ruangan yang sempit. Namun hal itu tidak menyurutkan niat kami untuk membantu kegiatan pendidikan terutama bagi anak-anak usia dini.
+  include modals/footer
+block scripts
+  // JavaScript plugins (requires jQuery)
+  script(src='/javascripts/jquery.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/javascripts/bootstrap/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap/bootstrap-carousel.js')
+  script(src='/javascripts/bootstrap/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap/respond.min.js')
+  //jquery cycle plugin
+  script(src='/javascripts/prettify.js')
+
+
+ 

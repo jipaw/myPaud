@@ -1,0 +1,39 @@
+extends layout
+block content
+  #nav-admin.navbar.navbar-fixed-top
+    .container
+      a.navbar-brand(href='#') Dashboard
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.js-navbar-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .nav-collapse.collapse.js-navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a.glyphicon.glyphicon-home(href='#')
+          li
+            a.glyphicon.glyphicon-book(href='#')
+          li
+            a.glyphicon.glyphicon-user(href='#')
+          li
+            a.glyphicon.glyphicon-picture(href='#')
+        ul.nav.navbar-nav.pull-right
+          li
+            a.glyphicon.glyphicon-off(href='/')
+        // /.nav-collapse
+        // /.container
+  include modals/sidebar
+block scripts
+  // JavaScript plugins (requires jQuery)
+  script(src='/javascripts/jquery.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/javascripts/bootstrap/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap/bootstrap-carousel.js')
+  script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap/bootstrap-typeahead.js')
+  //jquery cycle plugin
+  script(src='/javascripts/jquery.cycle2.min.js')
+  script(src='/javascripts/jquery.cycle2.caption2.min.js')

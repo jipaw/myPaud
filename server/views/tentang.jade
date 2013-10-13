@@ -1,0 +1,42 @@
+extends layout
+block content
+  include modals/navbar
+  include modals/loginModal
+  include modals/signUpModal
+  #tentang.container
+    h1(style='text-align: center;') Tentang Kami
+    .row
+      .address
+        br 
+        strong PAUD USWATUN HASANAH
+        br  
+        | Jl Raya Timur 540
+        br
+        | Cicalengka 40395
+        br
+        | Kab. Bandung Jawa Barat
+        br
+        p: i.icon-phone.icon-large   081385746759
+      .address
+        br
+        strong Kritik dan Saran
+        br
+        a: i.icon-envelope.icon-large(href='mailto:')  paud_uswatun_hasanah@yahoo.com
+        br
+        a: i.icon-facebook-sign.icon-large(href='#')  Paud Uswatun Hasanah
+          
+    #push
+  include modals/footer
+block scripts
+  // JavaScript plugins (requires jQuery)
+  script(src='/javascripts/jquery.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/javascripts/bootstrap/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap/respond.min.js')
+  //jquery cycle plugin
+  script(src='/javascripts/transition.js')
+  script(src='/javascripts/prettify.js')
